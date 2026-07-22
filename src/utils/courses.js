@@ -98,3 +98,17 @@ export function getDayClasses(sessions, day, selected) {
     .filter(s => s.day === day && selected.has(pickerKey(s.code, s.sec)))
     .sort((a, b) => a.start - b.start)
 }
+
+/**
+ * Strips verbose building names (e.g. "Academic Block II") from room strings,
+ * leaving only the short room identifier like "Lab-12" or "A-3".
+ *
+ * @param {string} room
+ * @returns {string}
+ */
+export function formatRoom(room) {
+  return room
+    .replace(/academic block\s*(ii|i)?\s*/gi, '')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
