@@ -1,17 +1,17 @@
-import { fmtTime } from '../../utils/time'
-import { formatRoom } from '../../utils/courses'   // ← add this import
-import { scheduleStyles as s } from '../../styles/schedule'
+import { fmtTime }               from '../../utils/time'
+import { formatRoom, formatCode } from '../../utils/courses'   // ← add formatCode
+import { scheduleStyles as s }   from '../../styles/schedule'
 
 export default function ClassCard({ session, isNow }) {
   const start       = fmtTime(session.start)
-  const displayCode = session.code.replace(/\s*lab$/i, '')
-  const room        = formatRoom(session.room)      // ← add this line
+  const room        = formatRoom(session.room)
+  const displayCode = formatCode(session.code.replace(/\s*lab$/i, '').trim()) // ← updated
 
   return (
     <article style={{ ...s.card, ...(isNow ? s.cardNow : s.cardDefault) }}>
       <div style={s.cardTop}>
         <div>
-          <div style={s.cardRoom}>{room}</div>        {/* ← was session.room */}
+          <div style={s.cardRoom}>{room}</div>
           <div style={s.cardSection}>{session.sec}</div>
         </div>
         <div style={s.cardCode}>

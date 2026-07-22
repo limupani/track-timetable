@@ -112,3 +112,26 @@ export function formatRoom(room) {
     .replace(/\s+/g, ' ')
     .trim()
 }
+
+/**
+ * Extracts the short abbreviation from a course code.
+ * Works for both formats:
+ *   - With code prefix:  "CL1002-PF"  → "PF"
+ *                        "AI2002-AI"  → "AI"
+ *                        "CS101-OOP"  → "OOP"
+ *   - Already short:     "DB"         → "DB"
+ *                        "DAA"        → "DAA"
+ *                        "GT"         → "GT"
+ *
+ * Handles timetables that use full codes AND ones that already
+ * use abbreviations — if no code pattern is detected, the input
+ * is returned unchanged.
+ *
+ * @param {string} code
+ * @returns {string}
+ */
+export function formatCode(code) {
+  // Match "LETTERS + DIGITS + hyphen + ABBREVIATION"  e.g. CL1002-PF
+  const match = code.match(/[A-Z]+\d+[-–]([A-Z]+)$/i)
+  return match ? match[1] : code
+}
