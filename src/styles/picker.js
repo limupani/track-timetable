@@ -78,7 +78,7 @@ export const pickerStyles = {
   pickerList: {
     flex:      1,
     overflowY: 'auto',
-    padding:   '0 16px 80px', // bottom padding leaves room for ScrollToTop button
+    padding:   '0 16px 100px', // ← increased so last items aren't hidden behind the fixed footer
   },
   groupLabel: {
     fontSize:      11,
@@ -116,38 +116,10 @@ export const pickerStyles = {
     color:   GRAY_LIGHT,
     fontSize: 13,
     padding: '14px 2px',
-  },
+  }
 
-  /* ── Footer ── */
-  pickerFooter: {
-    display:        'flex',
-    justifyContent: 'space-between',
-    alignItems:     'center',
-    padding:        '14px 20px',
-    borderTop:      `1px solid ${DIVIDER}`,
-    background:     WHITE,
-  },
-  footerCount: {
+  /* footerCount: {
     fontSize: 13,
     color:    GRAY,
-  },
-
-  /* ── Scroll-to-top floating button ── */
-  scrollToTopBtn: {
-    position:       'absolute',
-    bottom:         72,           // sits just above the footer
-    left:           20,
-    width:          42,
-    height:         42,
-    borderRadius:   '50%',
-    background:     GREEN,
-    border:         'none',
-    cursor:         'pointer',
-    display:        'flex',
-    alignItems:     'center',
-    justifyContent: 'center',
-    boxShadow:      '0 2px 12px rgba(0,0,0,0.15)',
-    color:          GREEN_TEXT,
-    transition:     'opacity 0.2s ease, transform 0.2s ease',
-  },
+  }, */
 }
