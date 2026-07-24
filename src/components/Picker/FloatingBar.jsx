@@ -17,13 +17,13 @@ export default function FloatingBar({ selectedCount, onDone, listRef }) {
       bottom:         24,
       left:           '50%',
       transform:      'translateX(-50%)',
-      width:          'calc(min(390px, 100vw) - 48px)',
+      width:          'calc(min(410px, 100vw) - 48px)',
       zIndex:         50,
       display:        'flex',
       alignItems:     'center',
       justifyContent: 'space-between',
       padding:        '10px 10px 10px 20px',
-      background:     '#FFFFFF',
+      background:     '#f8f7f7ea',
       borderRadius:   999,
       boxShadow:      '0 4px 24px rgba(0,0,0,0.13)',
       gap:            12,
@@ -42,8 +42,8 @@ export default function FloatingBar({ selectedCount, onDone, listRef }) {
           onClick={scrollToTop}
           aria-label="Scroll to top"
           style={{
-            width:          40,
-            height:         40,
+            width:          36,
+            height:         36,
             borderRadius:   '50%',
             background:     '#C0EF7D',
             border:         'none',
