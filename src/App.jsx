@@ -16,7 +16,7 @@ import { useState, useEffect, useMemo } from 'react'
 
 import { SESSIONS }                  from './data/sessions'
 import { DAYS }                      from './constants'
-import { todayName, nowMinutes }     from './utils/time'
+import { todayName }                 from './utils/time'
 import { buildCombos, filterCombos, getDayClasses, groupByCode } from './utils/courses'
 import { useSelectedCourses }        from './hooks/useSelectedCourses'
 import { useNowMinutes }             from './hooks/useNowMinutes'
@@ -24,34 +24,38 @@ import Schedule                      from './components/Schedule'
 import Picker                        from './components/Picker'
 
 export default function App() {
-  const [activeDay,   setActiveDay]   = useState(() => todayName())
-  const [showPicker,  setShowPicker]  = useState(false)
-  const [query,       setQuery]       = useState('')
+  const [activeDay,  setActiveDay]  = useState(() => todayName())
+  const [showPicker, setShowPicker] = useState(false)
+  const [query,      setQuery]      = useState('')
 
-  const { selected, toggle } = useSelectedCourses()
-  const nowMin               = useNowMinutes()
+  const { selected, toggle, clean } = useSelectedCourses()
+  const nowMin = useNowMinutes()
 
-  // Open picker automatically on first visit (nothing selected yet).
-  useEffect(() => {
-    if (selected.size === 0) setShowPicker(true)
-  }, []) // eslint-disable-line react-hooks/exhaustive-deps
-
-  // Build the full combo list once (sessions data never changes at runtime).
+  // Build full combo list once (sessions never change at runtime)
   const allCombos = useMemo(() => buildCombos(SESSIONS), [])
 
-  // Re-filter whenever the search query changes.
+  // ── Remove any saved selections that no longer exist in this timetable ──
+  // Runs once after mount. Fixes stale counts after a timetable update.
+  useEffect(() => {
+    const validKeys = new Set(allCombos.map(c => c.key))
+    clean(validKeys)
+  }, [allCombos, clean])
+
+  // Open picker automatically if nothing valid is selected
+  useEffect(() => {
+    if (selected.size === 0) setShowPicker(true)
+  }, [selected])
+
   const filteredCombos = useMemo(
     () => filterCombos(allCombos, query),
     [allCombos, query]
   )
 
-  // Group filtered combos by course code for the picker list.
   const grouped = useMemo(
     () => groupByCode(filteredCombos),
     [filteredCombos]
   )
 
-  // Derive the classes to show for the active day.
   const dayClasses = useMemo(
     () => getDayClasses(SESSIONS, activeDay, selected),
     [activeDay, selected]

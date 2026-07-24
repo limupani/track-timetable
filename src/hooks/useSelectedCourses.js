@@ -14,35 +14,27 @@
 import { useState, useEffect, useCallback } from 'react'
 import { STORAGE_KEY } from '../constants'
 
-/**
- * @returns {{
- *   selected: Set<string>,
- *   toggle:   (key: string) => void,
- * }}
- */
 export function useSelectedCourses() {
   const [selected, setSelected] = useState(() => new Set())
 
-  // ── Load on mount ───────────────────────────────────────────
+  // Load on mount
   useEffect(() => {
     try {
       const raw = localStorage.getItem(STORAGE_KEY)
       if (raw) setSelected(new Set(JSON.parse(raw)))
     } catch {
-      // Corrupted storage — start fresh silently.
+      // Corrupted storage — start fresh
     }
   }, [])
 
-  // ── Persist on every change ─────────────────────────────────
+  // Persist on every change
   useEffect(() => {
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify([...selected]))
-    } catch {
-      // Storage quota exceeded or private-browsing restriction — ignore.
-    }
+    } catch {}
   }, [selected])
 
-  // ── Toggle a single key in/out of the set ──────────────────
+  // Toggle a single key in/out
   const toggle = useCallback((key) => {
     setSelected(prev => {
       const next = new Set(prev)
@@ -51,5 +43,20 @@ export function useSelectedCourses() {
     })
   }, [])
 
-  return { selected, toggle }
+  /**
+   * Removes any saved selections that no longer exist in the current
+   * timetable data. Called once on mount in App.jsx after combos are built.
+   * Prevents stale counts after a timetable update.
+   *
+   * @param {Set<string>} validKeys - all pickerKeys present in current SESSIONS
+   */
+  const clean = useCallback((validKeys) => {
+    setSelected(prev => {
+      const next = new Set([...prev].filter(k => validKeys.has(k)))
+      // Only trigger a re-render if something was actually removed
+      return next.size !== prev.size ? next : prev
+    })
+  }, [])
+
+  return { selected, toggle, clean }
 }
