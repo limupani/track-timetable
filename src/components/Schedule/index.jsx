@@ -1,19 +1,3 @@
-/**
- * components/Schedule/index.jsx
- *
- * The main timetable view — shown after the user has selected their courses.
- * Composes Header, DayTabs, and ClassGrid; owns no state of its own.
- *
- * Props:
- *   activeDay    {string}
- *   dayClasses   {Array}
- *   today        {string}
- *   nowMin       {number}
- *   selected     {Set}
- *   onDayChange  {(day: string) => void}
- *   onOpenPicker {function}
- */
-
 import { scheduleStyles as s } from '../../styles/schedule'
 import Header    from './Header'
 import DayTabs   from './DayTabs'
@@ -39,7 +23,7 @@ export default function Schedule({
         nowMin={nowMin}
         selected={selected}
         onOpenPicker={onOpenPicker}
-      />
+      />                         
     </div>
   )
 }

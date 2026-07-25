@@ -33,3 +33,7 @@ export const GREEN_TEXT = '#1a5c00'
  *  Bump the version suffix (v1 → v2) if the data shape ever changes,
  *  so returning users get a clean slate instead of a parse error. */
 export const STORAGE_KEY = 'track_selected_v1'
+
+/** Path to the comic image served from the public/ folder.
+ *  To update the comic: replace public/comic.jpg and redeploy. */
+export const COMIC_SRC = '/comic.jpg'
