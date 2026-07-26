@@ -10,24 +10,26 @@
  */
 
 import { comicStyles as s } from '../../styles/comic'
-import Branding from '../Branding'             // ← add
 
 export default function ComicViewer({ comicUrl, onRemove }) {
   return (
     <div style={s.viewerWrapper}>
+      {/* Top bar */}
       <div style={s.viewerTopBar}>
-        <span style={s.viewerTitle}>Weekly Specials</span>
+        <span style={s.viewerTitle}>📖 Comic</span>
+        <button style={s.changeBtn} onClick={onRemove}>
+          Change comic
+        </button>
       </div>
 
+      {/* Scrollable comic strip */}
       <div style={s.viewerScroll}>
         <img
           src={comicUrl}
           alt="Comic"
           style={s.comicImage}
           draggable={false}
-          onError={() => setError(true)}
         />
-        <Branding />                           {/* ← add */}
       </div>
     </div>
   )
