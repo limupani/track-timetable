@@ -30,12 +30,12 @@ export const scheduleStyles = {
     display:        'flex',
     justifyContent: 'space-between',
     alignItems:     'center',
-    padding:        '52px 24px 12px',
+    padding:        '45px 24px 8px',
   },
   headerTitle: {
     display:    'flex',
     alignItems: 'baseline',
-    gap:        10,
+    gap:        8,
   },
   trackWord: {
     fontSize:      26,
@@ -63,8 +63,8 @@ export const scheduleStyles = {
   /* ── Day tabs ── */
   tabsRow: {
     display: 'flex',
-    gap:     6,
-    padding: '0 24px 20px',
+    gap:     2,
+    padding: '0 45px',
   },
   tab: {
     flex:           1,
@@ -77,7 +77,7 @@ export const scheduleStyles = {
   },
   tabBar: {
     width:      '100%',
-    borderRadius: 4,
+    borderRadius: 2,
     transition: 'height 0.15s ease, background 0.15s ease',
   },
 

@@ -48,8 +48,7 @@ export const comicStyles = {
     display:        'flex',
     justifyContent: 'space-between',
     alignItems:     'center',
-    padding:        '10px 16px',
-    background:     WHITE,
+    padding:        '2px 16px',
     flexShrink:     0,
   },
   viewerTitle: {
