@@ -67,7 +67,7 @@ export const comicStyles = {
     width:        'calc(100% - 32px)', // ← 16px padding on each side
     maxWidth:     'calc(100% - 32px)',
     display:      'block',
-    margin:       '16px auto',         // ← 16px top/bottom gap too
-    borderRadius: 12,                  // ← rounded corners
+    margin: '0 auto 16px',         // ← 16px top/bottom gap too
+    borderRadius:  12,                  // ← rounded corners
   }
 }
