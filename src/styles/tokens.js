@@ -21,6 +21,6 @@ export const DIVIDER      = '#f0f0f0'
 export const BG_SEARCH    = '#F4F4F4'
 export const WHITE        = '#FFFFFF'
 
-export const RADIUS_CARD  = 20
+export const RADIUS_CARD  = 12
 export const RADIUS_PILL  = 999
 export const RADIUS_SM    = 12
