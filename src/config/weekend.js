@@ -25,18 +25,18 @@ export const WEEKEND_CONFIG = {
 
   /** Tall left card — primary feature card */
   cardLeft: {
-    image:      '/studio/card-left.jpg',
-    alt:        'Lemon Andkon',
+    image:      '/studio/card-left.png',
+    alt:        'Lemon And Bon',
     url:        'https://www.instagram.com/lemonandbon/',
     /** Optional small label shown at bottom-left of the card */
-    label:      'lemon\nandkon',
+    label:      'lemon\nand Bon',
     /** Fallback background colour if image fails to load */
     background: '#F2ECD9',
   },
 
   /** Top right card */
   cardTopRight: {
-    image:      '/studio/card-top-right.jpg',
+    image:      '/studio/card-top-right.png',
     alt:        'Plushie',
     url:        'https://www.instagram.com/lemonandbon/',
     background: '#E07B6F',
@@ -44,7 +44,7 @@ export const WEEKEND_CONFIG = {
 
   /** Middle right card */
   cardMidRight: {
-    image:      '/studio/card-mid-right.jpg',
+    image:      '/studio/card-mid-right.png',
     alt:        'Limupani Studios',
     url:        'https://limupanistudios.vercel.app/',
     background: '#4A8C5C',
@@ -55,8 +55,8 @@ export const WEEKEND_CONFIG = {
    * Shows a background image with a title and subtitle overlay.
    */
   banner: {
-    image:      '/studio/banner.jpg',
-    background: '#1a1a2e',
+    image:      '/studio/banner.png',
+    background: '#72727a',
     eyebrow:    'Coming Soon',
     title:      'Eternal Nova',
   },

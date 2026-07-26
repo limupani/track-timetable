@@ -18,7 +18,7 @@ export const weekendStyles = {
     flex:      1,
     overflowY: 'auto',
     overflowX: 'hidden',
-    padding:   '20px 16px 32px',
+    padding:   '0 16px 32px',
     WebkitOverflowScrolling: 'touch',
   },
 
