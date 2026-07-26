@@ -18,7 +18,7 @@ export const weekendStyles = {
     flex:      1,
     overflowY: 'auto',
     overflowX: 'hidden',
-    padding:   '0 16px 32px',
+    padding:   '0 16px',
     WebkitOverflowScrolling: 'touch',
   },
 
@@ -29,7 +29,7 @@ export const weekendStyles = {
     color:         '#111',
     lineHeight:    1.15,
     letterSpacing: '-0.02em',
-    marginBottom:  18,
+    marginBottom:  8,
     whiteSpace:    'pre-line', // respects \n in the config string
   },
 
@@ -72,14 +72,14 @@ export const weekendStyles = {
   cardTopRight: {
     gridRow:    '1',
     gridColumn: '2',
-    color: '#ffffff',
+    color: '#F2ECD9',
   },
 
   /* ── Middle right card ── */
   cardMidRight: {
     gridRow:    '2',
     gridColumn: '2',
-    color: '#ffffff',
+    color: '#F2ECD9',
   },
 
   /* ── Card image — fills entire card ── */
@@ -101,19 +101,6 @@ export const weekendStyles = {
     display:    'flex',
     alignItems: 'center',
     justifyContent: 'center',
-  },
-
-  /* ── Optional bottom-left label on the left card ── */
-  cardLabel: {
-    position:   'absolute',
-    bottom:     12,
-    left:       12,
-    fontSize:   11,
-    fontWeight: 500,
-    color:      'rgba(0,0,0,0.45)',
-    lineHeight: 1.4,
-    whiteSpace: 'pre-line',
-    pointerEvents: 'none',
   },
 
   /* ── Bottom banner ── */
