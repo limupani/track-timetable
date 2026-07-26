@@ -38,13 +38,13 @@ export const weekendStyles = {
     display:             'grid',
     gridTemplateColumns: '1fr 1fr',
     gridTemplateRows:    '170px 170px',
-    gap:                 10,
-    marginBottom:        10,
+    gap:                 6,
+    marginBottom:        6,
   },
 
   /* ── Shared card base ── */
   card: {
-    borderRadius:    18,
+    borderRadius:    10,
     overflow:        'hidden',
     position:        'relative',
     cursor:          'pointer',
@@ -65,18 +65,21 @@ export const weekendStyles = {
   cardLeft: {
     gridRow:    '1 / 3',
     gridColumn: '1',
+    color:'#000000',
   },
 
   /* ── Top right card ── */
   cardTopRight: {
     gridRow:    '1',
     gridColumn: '2',
+    color: '#ffffff',
   },
 
   /* ── Middle right card ── */
   cardMidRight: {
     gridRow:    '2',
     gridColumn: '2',
+    color: '#ffffff',
   },
 
   /* ── Card image — fills entire card ── */
@@ -91,16 +94,13 @@ export const weekendStyles = {
   /* ── External link arrow (top-right corner of clickable cards) ── */
   linkIcon: {
     position:   'absolute',
-    top:        10,
-    right:      10,
+    top:        0,
+    right:      0,
     width:      28,
     height:     28,
-    borderRadius: '50%',
-    background: 'rgba(0,0,0,0.35)',
     display:    'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    backdropFilter: 'blur(4px)',
   },
 
   /* ── Optional bottom-left label on the left card ── */

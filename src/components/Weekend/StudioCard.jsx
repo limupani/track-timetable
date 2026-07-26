@@ -22,8 +22,8 @@ function LinkIcon() {
   return (
     <div style={s.linkIcon}>
       <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
-        <line x1="2" y1="11" x2="11" y2="2" stroke="#fff" strokeWidth="1.8" strokeLinecap="round"/>
-        <polyline points="5,2 11,2 11,8" fill="none" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+        <line x1="2" y1="12" x2="11" y2="2" stroke="currentColor" strokeWidth="3" strokeLinecap="round"/>
+        <polyline points="1,2 11,2 11,12" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
     </div>
   )
