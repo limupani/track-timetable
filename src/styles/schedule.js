@@ -52,8 +52,6 @@ export const scheduleStyles = {
   plusBtn: {
     width:          38,
     height:         38,
-    borderRadius:   '50%',
-    background:     GREEN,
     display:        'flex',
     alignItems:     'center',
     justifyContent: 'center',

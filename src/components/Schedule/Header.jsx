@@ -10,7 +10,7 @@
  */
 
 import { scheduleStyles as s } from '../../styles/schedule'
-import { GREEN_DEEP }           from '../../styles/tokens'
+import { GREEN }           from '../../styles/tokens'
 
 /** Maps a day name to its display label */
 function displayLabel(day) {
@@ -30,9 +30,9 @@ export default function Header({ activeDay, onOpenPicker }) {
         onClick={onOpenPicker}
         aria-label="Add or change courses"
       >
-        <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-          <line x1="11" y1="2"  x2="11" y2="20" stroke={GREEN_DEEP} strokeWidth="2.5" strokeLinecap="round" />
-          <line x1="2"  y1="11" x2="20" y2="11" stroke={GREEN_DEEP} strokeWidth="2.5" strokeLinecap="round" />
+        <svg width="18" height="18" viewBox="0 0 22 22" fill="none">
+          <line x1="11" y1="2"  x2="11" y2="20" stroke={GREEN} strokeWidth="4" strokeLinecap="round" />
+          <line x1="2"  y1="11" x2="20" y2="11" stroke={GREEN} strokeWidth="4" strokeLinecap="round" />
         </svg>
       </button>
     </header>
