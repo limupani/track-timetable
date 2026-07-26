@@ -27,7 +27,7 @@ export const WEEKEND_CONFIG = {
   cardLeft: {
     image:      '/studio/card-left.jpg',
     alt:        'Lemon Andkon',
-    url:        'https://www.instagram.com/lemonandkon/',
+    url:        'https://www.instagram.com/lemonandbon/',
     /** Optional small label shown at bottom-left of the card */
     label:      'lemon\nandkon',
     /** Fallback background colour if image fails to load */
@@ -38,7 +38,7 @@ export const WEEKEND_CONFIG = {
   cardTopRight: {
     image:      '/studio/card-top-right.jpg',
     alt:        'Plushie',
-    url:        'https://www.instagram.com/plushie/',
+    url:        'https://www.instagram.com/lemonandbon/',
     background: '#E07B6F',
   },
 
@@ -46,7 +46,7 @@ export const WEEKEND_CONFIG = {
   cardMidRight: {
     image:      '/studio/card-mid-right.jpg',
     alt:        'Limupani Studios',
-    url:        'https://www.limupani.com',
+    url:        'https://limupanistudios.vercel.app/',
     background: '#4A8C5C',
   },
 
