@@ -106,7 +106,7 @@ export const scheduleStyles = {
     flexDirection: 'column',
     gap:           2,
     position:      'relative',
-    minHeight:     160,
+    minHeight:     170,
   },
   cardNow: {
     background:  GREEN,
