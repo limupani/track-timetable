@@ -49,12 +49,11 @@ export const comicStyles = {
     justifyContent: 'space-between',
     alignItems:     'center',
     padding:        '10px 16px',
-    borderBottom:   `1px solid ${DIVIDER}`,
     background:     WHITE,
     flexShrink:     0,
   },
   viewerTitle: {
-    fontSize:   13,
+    fontSize:   30,
     fontWeight: 600,
     color:      '#555',
   },
@@ -69,6 +68,6 @@ export const comicStyles = {
     maxWidth:     'calc(100% - 32px)',
     display:      'block',
     margin:       '16px auto',         // ← 16px top/bottom gap too
-    borderRadius: 16,                  // ← rounded corners
+    borderRadius: 12,                  // ← rounded corners
   }
 }

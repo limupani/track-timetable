@@ -16,7 +16,7 @@ export default function ComicViewer({ comicUrl, onRemove }) {
   return (
     <div style={s.viewerWrapper}>
       <div style={s.viewerTopBar}>
-        <span style={s.viewerTitle}>📖 Comic</span>
+        <span style={s.viewerTitle}>Weekly Specials</span>
       </div>
 
       <div style={s.viewerScroll}>

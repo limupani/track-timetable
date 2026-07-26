@@ -35,7 +35,7 @@ export default function Comic() {
     <div style={s.viewerWrapper}>
       {/* Top bar */}
       <div style={s.viewerTopBar}>
-        <span style={s.viewerTitle}>📖 Comic</span>
+        <span style={s.viewerTitle}>Weekly Specials</span>
       </div>
 
       {/* Scrollable comic strip */}
