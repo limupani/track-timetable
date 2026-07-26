@@ -94,13 +94,13 @@ export const scheduleStyles = {
   grid: {
     display:             'grid',
     gridTemplateColumns: '1fr 1fr',
-    gap:                 3,
+    gap:                 4,
   },
 
   /* ── Class card ── */
   card: {
     borderRadius:  RADIUS_CARD,
-    border:        '1px solid',
+    border:        '2px solid',
     padding:       '14px 14px 16px',
     display:       'flex',
     flexDirection: 'column',
