@@ -54,8 +54,8 @@ export const comicStyles = {
   },
   viewerTitle: {
     fontSize:   30,
-    fontWeight: 600,
-    color:      '#555',
+    fontWeight: 700,
+    color:      '#000000',
   },
   viewerScroll: {
     flex:                    1,
