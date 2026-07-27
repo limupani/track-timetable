@@ -111,6 +111,7 @@ export const pickerStyles = {
     fontSize:  12,
     color:     GRAY,
     marginTop: 2,
+    fontFamily: "'Arimo', sans-serif",
   },
   emptyMessage: {
     color:   GRAY_LIGHT,
