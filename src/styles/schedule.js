@@ -98,7 +98,7 @@ export const scheduleStyles = {
   /* ── Class card ── */
   card: {
     borderRadius:  RADIUS_CARD,
-    border:        '2px solid',
+    border:        '1px solid',
     padding:       '14px 14px 16px',
     display:       'flex',
     flexDirection: 'column',
@@ -158,14 +158,14 @@ export const scheduleStyles = {
     fontFamily: "'Quicksand', sans-serif",
   },
   cardHour: {
-    fontSize:      45,
+    fontSize:      48,
     fontWeight:    650,
     color:         INK,
     lineHeight:    1,
     letterSpacing: '-0.03em',
     fontFamily: "'Quicksand', sans-serif",
     display:       'inline-block',
-    transform:     'scaleY(1.3)',
+    transform:     'scaleY(1.2)',
     transformOrigin: 'bottom',
   },
   cardAmpm: {
