@@ -9,9 +9,12 @@
 export default function Branding() {
   return (
     <div style={{
+      position: 'absolute',
+      bottom: 0,
+      left: 0,
       width:         '100%',
-      padding:       '24px 20px 20px',
-      textAlign:     'center',
+      padding:       '24px 18px 20px',
+      textAlign:     'left',
       fontSize:      11,
       fontWeight:    500,
       color:         '#ccc',

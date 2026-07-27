@@ -85,7 +85,7 @@ export const scheduleStyles = {
   content: {
     flex:      1,
     overflowY: 'auto',
-    padding:   '0 16px 32px',
+    padding:   '0 16px 48px',
   },
 
   /* ── Card grid ── */
