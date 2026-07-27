@@ -68,7 +68,7 @@ export const scheduleStyles = {
   },
   tab: {
     flex:           1,
-    padding:        '8px 0',
+    padding:        '8px 0 25px',
     display:        'flex',
     justifyContent: 'center',
     background:     'none',
