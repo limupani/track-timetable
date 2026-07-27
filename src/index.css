@@ -1,21 +1,21 @@
 /* ── tokens ─────────────────────────────────────────────── */
 @font-face {
   font-family: 'Micro';
-  src: url('./fonts/Microsoft Sans Serif.ttf') format('truetype');
+  src: url('/fonts/Microsoft Sans Serif.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Adelle';
-  src: url('./fonts/AdelleSans.ttc') format('truetype');
+  src: url('/fonts/AdelleSans.ttc') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Oct';
-  src: url('./fonts/OctoberCondensedDevanagari.ttc') format('truetype');
+  src: url('/fonts/OctoberCondensedDevanagari.ttc') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
