@@ -25,7 +25,7 @@ export const WEEKEND_CONFIG = {
 
   /** Tall left card — primary feature card */
   cardLeft: {
-    image:      '/studio/card-left.png',
+    image:      '/studio/card-left.jpg',
     alt:        'Lemon And Bon',
     url:        'https://www.instagram.com/lemonandbon/',
     /** Fallback background colour if image fails to load */
@@ -34,7 +34,7 @@ export const WEEKEND_CONFIG = {
 
   /** Top right card */
   cardTopRight: {
-    image:      '/studio/card-top-right.png',
+    image:      '/studio/card-top-right.jpg',
     alt:        'Plushie',
     url:        'https://www.instagram.com/lemonandbon/',
     background: '#E07B6F',

@@ -158,8 +158,8 @@ export const scheduleStyles = {
     fontFamily: "'Quicksand', sans-serif",
   },
   cardHour: {
-    fontSize:      42,
-    fontWeight:    600,
+    fontSize:      45,
+    fontWeight:    650,
     color:         INK,
     lineHeight:    1,
     letterSpacing: '-0.03em',
