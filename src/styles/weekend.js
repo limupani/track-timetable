@@ -110,6 +110,7 @@ export const weekendStyles = {
     height:       130,
     position:     'relative',
     boxShadow:    '0 2px 8px rgba(0,0,0,0.08)',
+    marginBottom: 20,
   },
   bannerImage: {
     width:     '100%',
