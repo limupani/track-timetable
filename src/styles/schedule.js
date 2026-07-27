@@ -120,7 +120,7 @@ export const scheduleStyles = {
     display:        'flex',
     justifyContent: 'space-between',
     alignItems:     'flex-start',
-    gap:            65,
+    gap:            7,
   },
   cardRoom: {
     fontSize:   13,
