@@ -111,16 +111,10 @@ export const pickerStyles = {
     fontSize:  12,
     color:     GRAY,
     marginTop: 2,
-    fontFamily: "'Arimo', sans-serif",
   },
   emptyMessage: {
     color:   GRAY_LIGHT,
     fontSize: 13,
     padding: '14px 2px',
   }
-
-  /* footerCount: {
-    fontSize: 13,
-    color:    GRAY,
-  }, */
 }

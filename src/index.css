@@ -1,4 +1,25 @@
 /* ── tokens ─────────────────────────────────────────────── */
+@font-face {
+  font-family: 'Micro';
+  src: url('./public/fonts/Microsoft Sans Serif.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Adelle';
+  src: url('./public/fonts/AdelleSans.ttc') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Oct';
+  src: url('./public/fonts/OctoberCondensedDevanagari.ttc') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --green:      #C0EF7D;
   --green-dark: #7ab832;
@@ -9,7 +30,7 @@
   --card-border:#D4F4A0;
   --radius-card: 20px;
   --phone-w:    390px;
-  --font: 'Arimo', system-ui, sans-serif;
+  --font: 'Micro', system-ui, sans-serif;
 }
 
 /* ── reset ──────────────────────────────────────────────── */
