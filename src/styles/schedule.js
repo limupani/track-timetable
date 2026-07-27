@@ -177,17 +177,4 @@ export const scheduleStyles = {
     overflow:     'hidden',
     textOverflow: 'ellipsis',
   },
-  nowBadge: {
-    position:      'absolute',
-    top:           12,
-    right:         12,
-    fontSize:      10,
-    fontWeight:    700,
-    textTransform: 'uppercase',
-    letterSpacing: '0.06em',
-    color:         GREEN_TEXT,
-    background:    'rgba(255,255,255,0.75)',
-    borderRadius:  RADIUS_PILL,
-    padding:       '2px 8px',
-  },
 }

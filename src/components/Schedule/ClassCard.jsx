@@ -26,7 +26,6 @@ export default function ClassCard({ session, isNow }) {
       </div>
 
       <div style={s.cardInstr}>{session.instr}</div>
-      {isNow && <span style={s.nowBadge}>Now</span>}
     </article>
   )
 }
