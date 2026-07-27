@@ -108,7 +108,7 @@ export const scheduleStyles = {
   },
   cardNow: {
     background:  GREEN,
-    borderColor: GREEN_BORDER,
+    borderColor: GREEN,
   },
   cardDefault: {
     background:  WHITE,
