@@ -13,7 +13,7 @@
 import { shared }        from '../../styles/shared'
 import { pickerStyles as s } from '../../styles/picker'
 
-export default function PickerHeader({ selectedCount, onDone }) {
+export default function PickerHeader({ selectedCount }) {
   return (
     <div style={s.pickerHeader}>
       <div>
@@ -21,12 +21,7 @@ export default function PickerHeader({ selectedCount, onDone }) {
           <span style={s.trackWord}>TRACK</span>
           <span style={s.headerSub}>your courses</span>
         </div>
-        <p style={s.headerHint}>Check off every section you're enrolled in.</p>
       </div>
-
-      {selectedCount > 0 && (
-        <button style={shared.doneBtn} onClick={onDone}>Done</button>
-      )}
     </div>
   )
 }

@@ -23,7 +23,6 @@ export const pickerStyles = {
     flexDirection: 'column',
     minHeight:     '100dvh',
     background:    WHITE,
-    position:      'relative', // anchor for the floating ScrollToTop button
   },
 
   /* ── Header ── */
@@ -31,28 +30,24 @@ export const pickerStyles = {
     display:        'flex',
     justifyContent: 'space-between',
     alignItems:     'flex-start',
-    padding:        '52px 24px 16px',
-    borderBottom:   `1px solid ${DIVIDER}`,
+    padding:        '52px 24px 0',
   },
   headerTitle: {
     display:    'flex',
     alignItems: 'baseline',
     gap:        8,
+    lineHeight: 1,
   },
   trackWord: {
     fontSize:   24,
     fontWeight: 700,
     color:      INK,
+    fontFamily: '"Adelle",sans-serif',
   },
   headerSub: {
     fontSize:   16,
     fontWeight: 500,
     color:      '#555',
-  },
-  headerHint: {
-    fontSize:  12.5,
-    color:     GRAY,
-    marginTop: 4,
   },
 
   /* ── Search bar ── */
