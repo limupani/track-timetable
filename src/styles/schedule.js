@@ -36,19 +36,18 @@ export const scheduleStyles = {
     display:    'flex',
     alignItems: 'baseline',
     gap:        8,
+    lineHeight: 1,
   },
   trackWord: {
-    fontSize:      26,
+    fontSize:      24,
     fontWeight:    700,
     color:         INK,
-    letterSpacing: '-0.02em',
     fontFamily: "'Adelle', sans serif",
   },
   dayWord: {
-    fontSize:      26,
-    fontWeight:    400,
+    fontSize:      24,
+    fontWeight:    200,
     color:         INK,
-    letterSpacing: '-0.02em',
     fontFamily: "'Adelle', sans serif",
   },
   plusBtn: {
