@@ -45,9 +45,10 @@ export const pickerStyles = {
     fontFamily: '"Adelle",sans-serif',
   },
   headerSub: {
-    fontSize:   16,
-    fontWeight: 500,
-    color:      '#555',
+    fontSize:   24,
+    fontWeight: 200,
+    color:      '#111111',
+    fontFamily: '"Adelle",sans-serif',
   },
 
   /* ── Search bar ── */

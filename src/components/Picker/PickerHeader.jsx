@@ -19,7 +19,7 @@ export default function PickerHeader({ selectedCount }) {
       <div>
         <div style={s.headerTitle}>
           <span style={s.trackWord}>TRACK</span>
-          <span style={s.headerSub}>your courses</span>
+          <span style={s.headerSub}>Courses</span>
         </div>
       </div>
     </div>
