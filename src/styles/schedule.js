@@ -100,7 +100,7 @@ export const scheduleStyles = {
   /* ── Class card ── */
   card: {
     borderRadius:  RADIUS_CARD,
-    border:        '1px solid',
+    border:        '2px solid',
     padding:       '14px 14px 16px',
     display:       'flex',
     flexDirection: 'column',
@@ -159,10 +159,10 @@ export const scheduleStyles = {
     paddingTop: 8,
   },
   cardHour: {
-    fontSize:      60,
+    fontSize:      65,
     fontWeight:    500,
     color:         INK,
-    lineHeight:    0.8,
+    lineHeight:    0.65,
     letterSpacing: '-0.03em',
     fontFamily: "'Oct', sans-serif",
   },
@@ -170,12 +170,11 @@ export const scheduleStyles = {
     fontSize:      13,
     fontWeight:    600,
     color:         INK_FAINT,
-    paddingBottom: 4,
+    paddingBottom: 1,
   },
   cardInstr: {
     fontSize:     12,
     color:        INK_FAINT,
-    marginTop:    2,
     whiteSpace:   'nowrap',
     overflow:     'hidden',
     textOverflow: 'ellipsis',
