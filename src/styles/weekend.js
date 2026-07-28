@@ -24,13 +24,14 @@ export const weekendStyles = {
 
   /* ── "More from the Studio" heading ── */
   heading: {
-    fontSize:      30,
-    fontWeight:    700,
+    fontSize:      40,
+    fontWeight:    500,
     color:         '#111',
-    lineHeight:    1.15,
-    letterSpacing: '-0.02em',
+    lineHeight:    0.9,
+    paddingTop:    8,               // 👈 FIX 1: Gives the top of the letters room to breathe
     marginBottom:  8,
-    whiteSpace:    'pre-line', // respects \n in the config string
+    whiteSpace:    'pre-line',
+    fontFamily:    '"Oct", sans-serif',
   },
 
   /* ── Main grid ── */

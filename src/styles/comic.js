@@ -52,9 +52,10 @@ export const comicStyles = {
     flexShrink:     0,
   },
   viewerTitle: {
-    fontSize:   30,
-    fontWeight: 700,
-    color:      '#000000',
+    fontSize:   35,
+    fontWeight: 500,
+    color:      '#111',
+    fontFamily: '"Oct",sans-serif'
   },
   viewerScroll: {
     flex:                    1,
