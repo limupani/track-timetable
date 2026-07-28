@@ -30,7 +30,7 @@ export const scheduleStyles = {
     display:        'flex',
     justifyContent: 'space-between',
     alignItems:     'center',
-    padding:        '45px 24px 8px',
+    padding:        '35px 24px 8px',
   },
   headerTitle: {
     display:    'flex',

@@ -30,7 +30,7 @@ export const pickerStyles = {
     display:        'flex',
     justifyContent: 'space-between',
     alignItems:     'flex-start',
-    padding:        '52px 24px 0',
+    padding:        '35px 24px 0',
   },
   headerTitle: {
     display:    'flex',
