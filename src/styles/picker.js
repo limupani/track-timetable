@@ -39,13 +39,14 @@ export const pickerStyles = {
     lineHeight: 1,
   },
   trackWord: {
-    fontSize:   24,
+    fontSize:   20,
     fontWeight: 700,
     color:      INK,
+    letterSpacing: '0.05em',
     fontFamily: '"Adelle",sans-serif',
   },
   headerSub: {
-    fontSize:   24,
+    fontSize:   20,
     fontWeight: 200,
     color:      '#111111',
     fontFamily: '"Adelle",sans-serif',

@@ -24,7 +24,7 @@ export const weekendStyles = {
 
   /* ── "More from the Studio" heading ── */
   heading: {
-    fontSize:      40,
+    fontSize:      35,
     fontWeight:    500,
     color:         '#111',
     lineHeight:    0.9,
