@@ -113,5 +113,43 @@ export const pickerStyles = {
     color:   GRAY_LIGHT,
     fontSize: 13,
     padding: '14px 2px',
-  }
+  },
+  
+  /* ── Filter bar (Program / Semester / Section pills) ── */
+  /* ── Filter bar (Program / Semester / Section pills) ── */
+  filterBar: {
+    display:       'flex',
+    flexDirection: 'column',
+    gap:           8,
+    margin:        '4px 16px 8px',
+  },
+  filterRow: {
+    display:                 'flex',
+    flexWrap:                'nowrap',   // ← no wrapping to a 2nd line
+    overflowX:                'auto',     // ← horizontal scroll instead
+    gap:                      6,
+    paddingBottom:            2,          // small buffer so pills don't touch the scrollbar area
+    WebkitOverflowScrolling:  'touch',    // smooth momentum scroll on iOS
+    scrollbarWidth:           'none',     // Firefox: hide scrollbar
+    msOverflowStyle:          'none',     // old Edge/IE: hide scrollbar
+  },
+  filterPill: {
+    fontSize:     12.5,
+    fontWeight:   'light',
+    fontFamily: '"Adelle"',
+    padding:      '0px 14px',
+    borderRadius: RADIUS_PILL,
+    border:       `1px solid ${GRAY_LIGHT}`,
+    background:   WHITE,
+    color:        INK,
+    cursor:       'pointer',
+    whiteSpace:   'nowrap',
+    flexShrink:   0,            // ← prevents pills from squishing to fit
+    transition:   'background 0.15s ease, border-color 0.15s ease, color 0.15s ease',
+  },
+  filterPillActive: {
+    background:  GREEN,
+    borderColor: GREEN,
+    color:       GREEN_TEXT,
+},
 }

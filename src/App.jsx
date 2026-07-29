@@ -12,12 +12,15 @@
  * To add a new top-level screen, import it here and add a condition below.
  */
 
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect, useMemo, useCallback } from 'react'
 
 import { SESSIONS }                  from './data/sessions'
 import { DAYS }                      from './constants'
 import { todayName }                 from './utils/time'
-import { buildCombos, filterCombos, getDayClasses, groupByCode } from './utils/courses'
+import {
+  buildCombos, filterCombos, getDayClasses, groupByCode,
+  getFilterOptions, filterByProgramSemesterSection,   // ← new
+} from './utils/courses'
 import { useSelectedCourses }        from './hooks/useSelectedCourses'
 import { useNowMinutes }             from './hooks/useNowMinutes'
 import Schedule                      from './components/Schedule'
@@ -28,33 +31,60 @@ export default function App() {
   const [showPicker, setShowPicker] = useState(false)
   const [query,      setQuery]      = useState('')
 
+  // ── Program / Semester / Section filters ──
+  const [programFilter,  setProgramFilter]  = useState(null)
+  const [semesterFilter, setSemesterFilter] = useState(null)
+  const [sectionFilter,  setSectionFilter]  = useState(null)
+
   const { selected, toggle, clean } = useSelectedCourses()
   const nowMin = useNowMinutes()
 
-  // Build full combo list once (sessions never change at runtime)
   const allCombos = useMemo(() => buildCombos(SESSIONS), [])
 
-  // ── Remove any saved selections that no longer exist in this timetable ──
-  // Runs once after mount. Fixes stale counts after a timetable update.
   useEffect(() => {
     const validKeys = new Set(allCombos.map(c => c.key))
     clean(validKeys)
   }, [allCombos, clean])
 
-  // Open picker automatically if nothing valid is selected
   useEffect(() => {
     if (selected.size === 0) setShowPicker(true)
   }, [selected])
 
-  const filteredCombos = useMemo(
-    () => filterCombos(allCombos, query),
-    [allCombos, query]
+  // Options shown in each pill row, cascading off the levels above
+  const filterOptions = useMemo(
+    () => getFilterOptions(allCombos, { program: programFilter, semester: semesterFilter }),
+    [allCombos, programFilter, semesterFilter]
   )
 
-  const grouped = useMemo(
-    () => groupByCode(filteredCombos),
-    [filteredCombos]
+  // Changing a level clears everything below it
+  const handleFilterChange = useCallback((level) => (value) => {
+    if (level === 'program') {
+      setProgramFilter(value)
+      setSemesterFilter(null)
+      setSectionFilter(null)
+    } else if (level === 'semester') {
+      setSemesterFilter(value)
+      setSectionFilter(null)
+    } else {
+      setSectionFilter(value)
+    }
+  }, [])
+
+  const filteredByPills = useMemo(
+    () => filterByProgramSemesterSection(allCombos, {
+      program:  programFilter,
+      semester: semesterFilter,
+      section:  sectionFilter,
+    }),
+    [allCombos, programFilter, semesterFilter, sectionFilter]
   )
+
+  const filteredCombos = useMemo(
+    () => filterCombos(filteredByPills, query),
+    [filteredByPills, query]
+  )
+
+  const grouped = useMemo(() => groupByCode(filteredCombos), [filteredCombos])
 
   const dayClasses = useMemo(
     () => getDayClasses(SESSIONS, activeDay, selected),
@@ -76,6 +106,9 @@ export default function App() {
           onQuery={setQuery}
           onToggle={toggle}
           onDone={handleDone}
+          filterOptions={filterOptions}
+          filters={{ program: programFilter, semester: semesterFilter, section: sectionFilter }}
+          onFilterChange={handleFilterChange}
         />
       ) : (
         <Schedule

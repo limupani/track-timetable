@@ -95,3 +95,8 @@ input  { font-family: inherit; }
     box-shadow: 0 0 0 1px rgba(0,0,0,.08), 0 8px 48px rgba(0,0,0,.12);
   }
 }
+
+/* ── Hide scrollbar on horizontally-scrolling filter pill rows ── */
+.filter-row-scroll::-webkit-scrollbar {
+  display: none;
+}

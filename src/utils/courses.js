@@ -135,3 +135,60 @@ export function formatCode(code) {
   const match = code.match(/[A-Z]+\d+[-–]([A-Z]+)$/i)
   return match ? match[1] : code
 }
+
+/**
+ * Splits a section string into its program, semester, and section parts.
+ * @param {string} sec - e.g. "BCS-5B", "BSFT-1E", "BSEE-5AB"
+ * @returns {{ program: string, semester: string, section: string }}
+ */
+export function parseSec(sec) {
+  const m = sec.match(/^([A-Z]+)-(\d+)([A-Za-z0-9]*)$/)
+  if (!m) return { program: sec, semester: '', section: '' }
+  return { program: m[1], semester: m[2], section: m[3] || '' }
+}
+
+/**
+ * Derives the available filter pills for each row, cascading down:
+ * semesters are limited to the chosen program, sections to the chosen
+ * program + semester. Pass `null` for a level that hasn't been picked yet.
+ *
+ * @param {Array} combos - full unfiltered combos list (buildCombos output)
+ * @param {{ program?: string|null, semester?: string|null }} active
+ */
+export function getFilterOptions(combos, { program = null, semester = null } = {}) {
+  const programs  = new Set()
+  const semesters = new Set()
+  const sections  = new Set()
+
+  combos.forEach(c => {
+    const p = parseSec(c.sec)
+    programs.add(p.program)
+    if (!program || p.program === program) {
+      if (p.semester) semesters.add(p.semester)
+      if ((!semester || p.semester === semester) && p.section) {
+        sections.add(p.section)
+      }
+    }
+  })
+
+  return {
+    programs:  [...programs].sort(),
+    semesters: [...semesters].sort((a, b) => Number(a) - Number(b)),
+    sections:  [...sections].sort(),
+  }
+}
+
+/**
+ * Filters combos down to the selected program/semester/section.
+ * Any level left as null is ignored (matches everything).
+ */
+export function filterByProgramSemesterSection(combos, { program, semester, section }) {
+  if (!program && !semester && !section) return combos
+  return combos.filter(c => {
+    const p = parseSec(c.sec)
+    if (program  && p.program  !== program)  return false
+    if (semester && p.semester !== semester) return false
+    if (section  && p.section  !== section)  return false
+    return true
+  })
+}
