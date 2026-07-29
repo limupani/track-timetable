@@ -8,8 +8,36 @@
 
 @font-face {
   font-family: 'Adelle';
-  src: url('/fonts/AdelleSans.ttc') format('truetype');
+  src: url('/fonts/AdelleSansMultiscript-Regular-01.otf') format('opentype');
   font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Adelle';
+  src: url('/fonts/AdelleSansMultiscript-Semibold-02.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Adelle';
+  src: url('/fonts/AdelleSansMultiscript-Bold-03.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Adelle';
+  src: url('/fonts/AdelleSansMultiscript-ExtraBold-04.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Adelle';
+  src: url('/fonts/AdelleSansMultiscript-Light-06.otf') format('opentype');
+  font-weight: light;
   font-style: normal;
 }
 

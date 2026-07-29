@@ -40,17 +40,17 @@ export const scheduleStyles = {
   },
   trackWord: {
     fontSize:      20,
-    fontWeight:    700,
+    fontWeight:    300,
     color:         INK,
     letterSpacing: '0.05em',
-    fontFamily: "'Adelle', sans serif",
+    fontFamily: "'Adelle'",
   },
   dayWord: {
     fontSize:      20,
-    fontWeight:    200,
+    fontWeight: 'light',
     color:         INK,
     letterSpacing: '0.02em',
-    fontFamily: "'Adelle', sans serif",
+    fontFamily: "'Adelle'",
   },
   plusBtn: {
     width:          38,

@@ -40,16 +40,16 @@ export const pickerStyles = {
   },
   trackWord: {
     fontSize:   20,
-    fontWeight: 700,
+    fontWeight: 300,
     color:      INK,
     letterSpacing: '0.05em',
-    fontFamily: '"Adelle",sans-serif',
+    fontFamily: '"Adelle"',
   },
   headerSub: {
     fontSize:   20,
-    fontWeight: 200,
-    color:      '#111111',
-    fontFamily: '"Adelle",sans-serif',
+    fontWeight: 'light',
+    color:      INK,
+    fontFamily: '"Adelle"',
   },
 
   /* ── Search bar ── */
