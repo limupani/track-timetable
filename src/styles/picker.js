@@ -116,7 +116,6 @@ export const pickerStyles = {
   },
   
   /* ── Filter bar (Program / Semester / Section pills) ── */
-  /* ── Filter bar (Program / Semester / Section pills) ── */
   filterBar: {
     display:       'flex',
     flexDirection: 'column',

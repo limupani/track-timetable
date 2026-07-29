@@ -102,7 +102,7 @@ export const scheduleStyles = {
   card: {
     borderRadius:  RADIUS_CARD,
     border:        '2px solid',
-    padding:       '14px 14px 16px',
+    padding:       '14px 8px 16px',
     display:       'flex',
     flexDirection: 'column',
     gap:           2,
@@ -155,17 +155,16 @@ export const scheduleStyles = {
   cardTime: {
     display:    'flex',
     alignItems: 'flex-end',
-    gap:        3,
+    gap:        1,
     marginTop:  'auto',
     paddingTop: 8,
   },
   cardHour: {
     fontSize:      65,
-    fontWeight:    500,
+    fontWeight:    300,
     color:         INK,
     lineHeight:    0.65,
-    letterSpacing: '-0.03em',
-    fontFamily: "'Oct', sans-serif",
+    fontFamily: "'Oct'",
   },
   cardAmpm: {
     fontSize:      13,
