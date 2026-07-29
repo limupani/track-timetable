@@ -102,7 +102,7 @@ export const scheduleStyles = {
   card: {
     borderRadius:  RADIUS_CARD,
     border:        '2px solid',
-    padding:       '14px 8px 16px',
+    padding:       '10px',
     display:       'flex',
     flexDirection: 'column',
     gap:           2,
