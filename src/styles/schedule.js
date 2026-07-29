@@ -161,7 +161,7 @@ export const scheduleStyles = {
   },
   cardHour: {
     fontSize:      65,
-    fontWeight:    300,
+    fontWeight:    200,
     color:         INK,
     lineHeight:    0.65,
     fontFamily: "'Oct'",

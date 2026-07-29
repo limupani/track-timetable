@@ -46,6 +46,7 @@
   src: url('/fonts/OctoberCondensedDL-Regular-01.otf') format('opentype');
   font-weight: 200;
   font-style: normal;
+  font-display: swap
 }
 
 @font-face {
@@ -53,6 +54,7 @@
   src: url('/fonts/OctoberCondensedDL-Medium-02.otf') format('opentype');
   font-weight: 300;
   font-style: normal;
+  font-display: swap
 }
 
 @font-face {
@@ -60,6 +62,7 @@
   src: url('/fonts/OctoberCondensedDL-Bold-03.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
+  font-display: swap
 }
 
 @font-face {
@@ -67,6 +70,7 @@
   src: url('/fonts/OctoberCondensedDL-Thin-08.otf') format('opentype');
   font-weight: 100;
   font-style: normal;
+  font-display: swap
 }
 
 :root {
