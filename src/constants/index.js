@@ -13,7 +13,7 @@ export const DAYS = [
   'Wednesday',
   'Thursday',
   'Friday',
-  'Saturday',
+  /*'Saturday',*/
   'Sunday',
 ]
 
