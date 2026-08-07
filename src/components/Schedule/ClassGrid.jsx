@@ -2,13 +2,13 @@
  * components/Schedule/ClassGrid.jsx
  *
  * Decides what to render in the scrollable content area:
- *   - Sunday        → Weekend screen (More from the Studio)
+ *   - Sat/Sun       → Weekend screen (More from the Studio)
  *   - No picks      → EmptyDay (prompt to select courses)
  *   - Free day      → Comic viewer
  *   - Has classes   → 2-column ClassCard grid
  */
 
-import { SUNDAY_IDX, DAYS } from '../../constants'
+import { isWeekendDay } from '../../constants'
 import { scheduleStyles as s } from '../../styles/schedule'
 import ClassCard  from './ClassCard'
 import EmptyDay   from './EmptyDay'
@@ -24,12 +24,12 @@ export default function ClassGrid({
   selected,
   onOpenPicker,
 }) {
-  const isSunday  = activeDay === DAYS[SUNDAY_IDX]
+  const isWeekend = isWeekendDay(activeDay)
   const hasPicks  = selected.size > 0
   const noClasses = dayClasses.length === 0
 
-  /* Sunday — Weekend screen handles its own scroll and padding */
-  if (isSunday) {
+  /* Saturday & Sunday — Weekend screen handles its own scroll and padding */
+  if (isWeekend) {
     return (
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', minHeight: 0 }}>
         <div style={{ flex: 1, overflowY: 'auto' }}>

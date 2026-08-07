@@ -2,7 +2,7 @@
  * components/Schedule/Header.jsx
  *
  * Top bar of the Schedule screen.
- * Shows "TRACK Weekend" on Sundays, "TRACK [Day]" on all other days.
+ * Shows "TRACK Weekend" on Saturday & Sunday, "TRACK [Day]" on all other days.
  *
  * Props:
  *   activeDay    {string}   - full day name e.g. "Monday" or "Sunday"
@@ -10,11 +10,12 @@
  */
 
 import { scheduleStyles as s } from '../../styles/schedule'
-import { GREEN }           from '../../styles/tokens'
+import { GREEN }               from '../../styles/tokens'
+import { isWeekendDay }        from '../../constants'
 
 /** Maps a day name to its display label */
 function displayLabel(day) {
-  return day === 'Sunday' ? 'Weekend' : day
+  return isWeekendDay(day) ? 'Weekend' : day
 }
 
 export default function Header({ activeDay, onOpenPicker }) {

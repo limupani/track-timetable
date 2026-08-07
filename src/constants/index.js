@@ -13,15 +13,23 @@ export const DAYS = [
   'Wednesday',
   'Thursday',
   'Friday',
-  /*'Saturday',*/
+
   'Sunday',
 ]
 
 /** Abbreviated labels shown on the day-tab bar. */
-export const DAY_SHORT = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+export const DAY_SHORT = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sun']
 
 /** Index of Sunday in the DAYS array (used for the "coming soon" splash). */
 export const SUNDAY_IDX = 6
+
+/** Index of Saturday in the DAYS array (used alongside Sunday for the Weekend screen). */
+export const SATURDAY_IDX = 5
+
+/** Returns true if the given day name should show the Weekend screen. */
+export function isWeekendDay(day) {
+  return day === DAYS[SATURDAY_IDX] || day === DAYS[SUNDAY_IDX]
+}
 
 /** Brand accent colour. */
 export const GREEN = '#C0EF7D'
